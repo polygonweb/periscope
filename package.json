@@ -1,0 +1,17 @@
+{
+  "name": "periscope",
+  "version": "0.0.1",
+  "description": "Верстка для проекта periscope",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polygonweb/periscope.git"
+  },
+  "author": "Monochromer",
+  "email": "monochromer@mail.ru",
+  "bugs": {
+    "url": "https://github.com/polygonweb/periscope/issues"
+  },
+  "homepage": "https://github.com/polygonweb/periscope#readme"
+}
