@@ -3,7 +3,18 @@
   "version": "0.0.1",
   "description": "Верстка для проекта periscope",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "npm run dev",
+    "clean": "rm -rf docs",
+    "folders": "mkdir docs & mkdir \"docs/css\"",
+    "build": "concurrently \"npm run clean\" & \"npm run css:build\" && \"npm run html:build\"",
+    "dev": "concurrently \"npm run css:watch\" && \"npm run html:watch\" && \"npm run server\"",
+    "server": "browser-sync start --server --files \"docs/**/*.*\"",
+    "css:build": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css  --out docs/css",
+    "css:watch": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css  --out docs/css --watch",
+    "html:build": "pug src/views/index.pug --pretty --out docs",
+    "html:watch": "pug src/views/index.pug --pretty --out docs --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/polygonweb/periscope.git"
@@ -13,5 +24,16 @@
   "bugs": {
     "url": "https://github.com/polygonweb/periscope/issues"
   },
-  "homepage": "https://github.com/polygonweb/periscope#readme"
+  "homepage": "https://github.com/polygonweb/periscope#readme",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.10.0",
+    "browser-sync": "^2.16.0",
+    "concurrently": "^3.0.0",
+    "pug": "^2.0.0-beta6",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "normalize.css": "^4.2.0"
+  }
 }
