@@ -9,9 +9,9 @@
     "folders": "mkdir docs & mkdir \"docs/css\"",
     "build": "concurrently \"npm run clean\" & \"npm run css:build\" && \"npm run html:build\"",
     "dev": "concurrently \"npm run css:watch\" && \"npm run html:watch\" && \"npm run server\"",
-    "server": "browser-sync start --server --files \"docs/**/*.*\"",
-    "css:build": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css  --out docs/css",
-    "css:watch": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css  --out docs/css --watch",
+    "server": "browser-sync start --server --files \"docs/**/*.*\" --serveStatic docs",
+    "css:build": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css --include node_modules --out docs/css",
+    "css:watch": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css --include node_modules --out docs/css --watch",
     "html:build": "pug src/views/index.pug --pretty --out docs",
     "html:watch": "pug src/views/index.pug --pretty --out docs --watch"
   },
