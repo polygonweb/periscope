@@ -7,27 +7,81 @@ html
 		meta(name="format-detection" content="address=no")
 		meta(name="format-detection" content="telephone=no")
 		link(rel="stylesheet" href="css/index.css")
+		//- link(rel="stylesheet" href="css/index.min.css")
 		title Periscope | ЛАБОРАТОРИЯ ЗНАНИЙ
 	body
 
-		h1.logo Periscope
+		//- svg.svg-defs(xmlns="http://www.w3.org/2000/svg")
+		//- 	symbol(width="20" height="20" viewBox="0 0 20 20")
+		//- 		g(fill="none" fill-rule="evenodd")
+		//- 			path(fill="#3F4D60" d="M18.9 0H1.1C.492 0 0 .492 0 1.1v17.79c0 .292.116.572.322.778.206.206.486.322.778.322h9.58v-7.75H8.07v-3h2.61V7c-.11-1.07.26-2.132 1.008-2.904.75-.77 1.8-1.172 2.872-1.096.778-.002 1.556.038 2.33.12v2.7h-1.6c-.414-.094-.847.03-1.15.327-.303.297-.435.727-.35 1.143v1.93h3l-.39 3h-2.6V20h5.1c.292 0 .572-.116.778-.322.206-.206.322-.486.322-.778V1.1c0-.292-.116-.572-.322-.778C19.472.116 19.192 0 18.9 0z")
 
-		header.header
-			.container
-				h2 лаборатория знаний
+		//- 	symbol(width="20" height="17" viewBox="0 0 20 17")#icon-twitter
+		//- 		g(fill="none" fill-rule="evenodd")
+		//- 			path(fill="#3F4D60" d="M20.05 1.916c-.75.334-1.545.553-2.36.65.855-.514 1.495-1.32 1.8-2.27-.807.48-1.69.818-2.61 1-1.272-1.354-3.294-1.686-4.933-.81-1.638.875-2.486 2.74-2.067 4.55-3.3-.165-6.376-1.724-8.46-4.29C.33 2.622.887 5.02 2.69 6.226c-.652-.02-1.29-.194-1.86-.51v.05c.013 1.944 1.386 3.613 3.29 4-.603.164-1.236.188-1.85.07.538 1.67 2.076 2.815 3.83 2.85-1.454 1.143-3.25 1.763-5.1 1.76-.334 0-.668-.02-1-.06 3.594 2.32 8.17 2.49 11.923.438 3.755-2.05 6.087-5.99 6.077-10.268v-.53c.803-.576 1.497-1.29 2.05-2.11z")
 
-		section
-			.container
-				button.btn(style="width: 285px") Button
-				button.btn.btn_outline(style="width: 200px") Button
+		//- 	symbol(width="22" height="16" viewBox="0 0 22 16")#icon-youtube
+		//- 		g(fill="none" fill-rule="evenodd")
+		//- 			path(fill="#3F4D60" d="M20.89 1.15c-.583-.587-1.373-.92-2.2-.93C15.61 0 10.99 0 10.99 0s-6.92.164-7.7.22c-.827.01-1.617.343-2.2.93-.467.643-.767 1.392-.87 2.18C.083 4.512.01 5.7 0 6.89v1.67c.01 1.19.083 2.378.22 3.56.103.788.403 1.537.87 2.18.67.595 1.533.93 2.43.94 1.76.17 7.48.22 7.48.22s4.62 0 7.7-.23c.827-.01 1.617-.343 2.2-.93.467-.643.767-1.392.87-2.18.137-1.182.21-2.37.22-3.56V6.89c-.013-1.19-.09-2.378-.23-3.56-.103-.788-.403-1.537-.87-2.18zM8.98 10.58V4.4l5.94 3.1-5.94 3.08z")
 
-		section.map
+		.page
 
-		footer.footer.container
-			.footer__copy © Periscope, Perm 2015
-			.footer__links
-				a(href="#404" target="_blank" class="social-link") facebook
-				a(href="#404" target="_blank" class="social-link") twitter
-				a(href="#404" target="_blank" class="social-link") youtube
-				a(href="#404" target="_blank" class="social-link") вконтакте
-				a(href="#404" target="_blank" class="social-link") инстаграм
+			h1.logo Periscope
+
+
+			header.header
+				.container.header__inner
+					h2.header__title
+						div.header__text
+							div лаборатория
+							div знаний
+					.header__action
+						a(href="#404").btn Записаться
+
+
+			section.section.form-section
+				.inner-container
+					h2.form-section__title Оставить заявку
+					p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время
+					form(action="" name="").requset-form
+						input(placeholder="Ваше имя").text-input.requset-form__input
+						input(placeholder="Ваш номер телефона").text-input.requset-form__input
+						button(type="submit").btn.requset-form__submit Отправить заявку
+
+
+			section.section.time-place
+				.container.time-place__container
+					.inner-container
+						h2.section__title.time-place__title Время и место
+						div
+							div Занятия проходят во внеурочное время по будням с 8:00 до 13:30 и с 13:30 до 19:00
+							div по адресу Советская, 21 (вход со двора), телефон: +7 (901) 112-64-15
+
+
+			section.map
+				script(
+					type="text/javascript"
+					charset="utf-8"
+					async
+					src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=BYVNa9W_D1PWSzMavApSQr0ys37smCj0&amp;width=100%&amp;height=378&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
+
+
+			footer.footer
+				.footer__inner.inner-container
+					.footer__cell.footer__copy © Periscope, Perm 2015
+
+					.footer__cell.footer__links
+						//- a(href="#404" target="_blank").social-link
+						//- 	span.social-link__icon.social-link__icon_facebook
+
+						//- a(href="#404" target="_blank").social-link
+						//- 	span.social-link__icon.social-link__icon_twitter
+
+						//- a(href="#404" target="_blank").social-link
+						//- 	span.social-link__icon.social-link__icon_youtube
+
+						a(href="#404" target="_blank").social-link
+							span.social-link__icon.social-link__icon_vk
+
+						a(href="#404" target="_blank").social-link
+							span.social-link__icon.social-link__icon_in

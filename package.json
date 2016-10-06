@@ -7,13 +7,15 @@
     "start": "npm run dev",
     "clean": "rm -rf docs",
     "folders": "mkdir docs & mkdir \"docs/css\"",
-    "build": "concurrently \"npm run clean\" & \"npm run css:build\" && \"npm run html:build\"",
+    "build": "concurrently \"npm run clean\" & \"npm run css:build\" && \"npm run html:build\" && \"npm run scripts:build\"",
     "dev": "concurrently \"npm run css:watch\" && \"npm run html:watch\" && \"npm run server\"",
     "server": "browser-sync start --server --files \"docs/**/*.*\" --serveStatic docs",
-    "css:build": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css --include node_modules --out docs/css",
+    "css:build": "stylus src/styles/index.styl --compress --use autoprefixer-stylus --include-css --include node_modules --out docs/css/index.min.css",
     "css:watch": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css --include node_modules --out docs/css --watch",
+    "css:min": "csso --input docs/css/index.css --output docs/css/index.min.css --comments none --restructure-off",
     "html:build": "pug src/views/index.pug --pretty --out docs",
-    "html:watch": "pug src/views/index.pug --pretty --out docs --watch"
+    "html:watch": "pug src/views/index.pug --pretty --out docs --watch",
+    "scripts:build": "uglifyjs src/scripts/scripts.js --output --compress --output docs/js/scripts.js"
   },
   "repository": {
     "type": "git",
@@ -29,9 +31,11 @@
     "autoprefixer-stylus": "^0.10.0",
     "browser-sync": "^2.16.0",
     "concurrently": "^3.0.0",
+    "csso": "^2.2.1",
     "pug": "^2.0.0-beta6",
     "pug-cli": "^1.0.0-alpha6",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "uglify-js": "^2.7.3"
   },
   "dependencies": {
     "normalize.css": "^4.2.0"
