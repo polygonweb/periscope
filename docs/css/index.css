@@ -426,6 +426,7 @@ html {
   color: #243343;
 }
 .page {
+  min-width: 480px;
   overflow: hidden;
 }
 .svg-defs {
@@ -467,6 +468,7 @@ html {
   color: #cfd2d7;
 }
 .text-input:focus {
+  outline: 0;
   border-color: #fff801;
   box-shadow: 0 0 0 1px #fff801;
 }
@@ -496,7 +498,7 @@ html {
   background: #f5dc00;
 }
 .btn_outline {
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 15px;
   border: 1px solid #000;
   background: #fbfbfc;
@@ -518,6 +520,8 @@ html {
 .inner-container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
   max-width: 809px;
 }
 .logo {
@@ -537,6 +541,8 @@ html {
 }
 .section {
   position: relative;
+  padding-top: 108px;
+  padding-bottom: 84px;
 }
 .section__title {
   margin-top: 0;
@@ -577,7 +583,7 @@ html {
   right: 0;
   left: 50%;
   margin-left: -586px;
-  background: url("../img/header.jpg") no-repeat #ff6481;
+  background: url("../img/lines.svg") no-repeat calc(100% - 305px) 0, url("../img/header.jpg") no-repeat #ff6481;
 }
 .header__inner {
   position: relative;
@@ -637,6 +643,42 @@ html {
   width: 56px;
   height: 22px;
   background: url("../img/yellow-arrows.svg") no-repeat;
+}
+.page-nav {
+  text-align: center;
+}
+.page-nav__link {
+  margin: 0 25px;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  color: inherit;
+  font-size: 28px;
+  font-weight: 600;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.page-nav__link_active,
+.page-nav__link:hover {
+  color: #ff2851;
+}
+.info-block__inner {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 56px;
+     -moz-column-gap: 56px;
+          column-gap: 56px;
+}
+.info-block__inner p {
+  margin: 0 0 20px;
+}
+.info-block::after {
+  content: "";
+  margin-top: 135px;
+  display: block;
+  height: 1px;
+  background: #ebedef;
 }
 .form-section {
   padding: 85px 0 104px;
@@ -732,7 +774,8 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 19px 0;
+  padding-top: 19px;
+  padding-bottom: 19px;
 }
 .footer__cell {
   padding: 24px 0;
