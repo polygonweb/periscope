@@ -501,13 +501,33 @@ html {
   padding: 10px 20px;
   font-size: 15px;
   border: 1px solid #000;
-  background: #fbfbfc;
+  background: #fff;
 }
 .btn_outline:hover {
   background: #f0f1f2;
 }
 .btn_outline:active {
   background: #e5e6e9;
+}
+.link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.2;
+  height: 1px;
+  background: currentColor;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.link:hover::after {
+  opacity: 0;
 }
 .container {
   position: relative;
@@ -547,6 +567,7 @@ html {
 .section__title {
   margin-top: 0;
   margin-bottom: 45px;
+  text-align: center;
   font-size: 36px;
   font-weight: 600;
 }
@@ -583,7 +604,8 @@ html {
   right: 0;
   left: 50%;
   margin-left: -586px;
-  background: url("../img/lines.svg") no-repeat calc(100% - 305px) 0, url("../img/header.jpg") no-repeat #ff6481;
+  background: url("../img/lines.svg") no-repeat 100% 0, url("../img/header.jpg") no-repeat 50% 50% #ff6481;
+  background-size: auto, cover;
 }
 .header__inner {
   position: relative;
@@ -645,6 +667,7 @@ html {
   background: url("../img/yellow-arrows.svg") no-repeat;
 }
 .page-nav {
+  padding-top: 92px;
   text-align: center;
 }
 .page-nav__link {
@@ -679,6 +702,71 @@ html {
   display: block;
   height: 1px;
   background: #ebedef;
+}
+.features {
+  padding-top: 18px;
+  text-align: center;
+  font-size: 0;
+}
+.features__cell {
+  margin-bottom: 93px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 0 28px;
+  width: 376px;
+  font-size: 1rem;
+}
+.feature {
+  position: relative;
+  overflow: hidden;
+}
+.feature::before,
+.feature::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 80px;
+  border-top: 3px dashed;
+}
+.feature::before {
+  left: 0;
+}
+.feature::after {
+  right: 0;
+}
+.feature__icon {
+  margin-bottom: 43px;
+  display: inline-block;
+  vertical-align: top;
+  width: 96px;
+  height: 96px;
+}
+.feature__title {
+  margin: 0 0 13px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.feature__text {
+  line-height: 1.33;
+}
+.doc-section {
+  text-align: center;
+}
+.doc-section__download {
+  min-width: 216px;
+}
+.doc-section__container {
+  position: relative;
+}
+.doc-section__container::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 65px;
+  height: 11px;
+  background: url("../img/crosses.svg") no-repeat;
 }
 .form-section {
   padding: 85px 0 104px;
