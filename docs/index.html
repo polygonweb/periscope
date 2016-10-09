@@ -11,6 +11,11 @@
     <title>Periscope | ЛАБОРАТОРИЯ ЗНАНИЙ</title>
   </head>
   <body>
+    <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg">
+      <symbol width="74" height="4" viewBox="0 0 74 4" id="dash-line">
+        <path fill="none" stroke="currentColor" stroke-width="3" d="M2 2h79.62" stroke-linecap="round" stroke-dasharray="10"></path>
+      </symbol>
+    </svg>
     <div class="page">
       <h1 class="logo">Periscope</h1>
       <header class="header">
@@ -27,71 +32,349 @@
       <section>
         <div class="container">
           <h2 class="section__title">
-            <nav class="page-nav"><a class="page-nav__link" href="#">Лаборатория</a><a class="page-nav__link" href="#">Продленка</a><a class="page-nav__link" href="#">Каникулы</a></nav>
+            <nav class="page-nav"><a class="page-nav__link page-nav__link_active" href="#lab">Лаборатория</a><a class="page-nav__link" href="#after">Продленка</a><a class="page-nav__link" href="#holidays">Каникулы</a></nav>
           </h2>
         </div>
       </section>
-      <section class="intro-section">
-        <div class="info-block inner-container">
-          <div class="info-block__inner">
-            <p>Группа продленного дня — это отличный способ сделать уроки, погулять, пообедать и позаниматься по разным программам. Большой плюс заключается в том, что по всем занятиям не придется ездить, простаивая в пробках, утомляя себя и ребенка. Мы находимся в самом сердце города у Сквера оперного театра. Диетический и вкусный обед, прогулка</p>
-            <p>в парке снимут усталость, оздоровят, наполнят детскую душу покоем и радостью. Мы тщательно сделаем все уроки, убедимся, что материал усвоен.</p>
-            <p>При необходимости позанимаемся по предмету дополнительно. Удивительно, что ребята незаметно для себя становятся аккуратными, усидчивыми и внимательными!</p>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="inner-container">
-          <h2 class="section__title">Программы</h2>
-          <div class="inner-container">
-            <div class="features">
-              <div class="features__cell">
-                <div class="feature"><img class="feature__icon" src="img/features/4.svg">
-                  <div class="feature__title">Пятый элемент</div>
-                  <div class="feature__text">Познаем мир. Ставим химические, физические и биологические опыты</div>
-                </div>
-              </div>
-              <div class="features__cell">
-                <div class="feature"><img class="feature__icon" src="img/features/1.svg">
-                  <div class="feature__title">Анатомия здоровья</div>
-                  <div class="feature__text">Изучаем свой организм. Узнаем, как ухаживать за своим телом и его органами</div>
-                </div>
-              </div>
-              <div class="features__cell">
-                <div class="feature"><img class="feature__icon" src="img/features/2.svg">
-                  <div class="feature__title">Творческая мастерская</div>
-                  <div class="feature__text">Раскрываем свой потенциал. Рисуем, лепим, мастерим</div>
-                </div>
-              </div>
-              <div class="features__cell">
-                <div class="feature"><img class="feature__icon" src="img/features/9.svg">
-                  <div class="feature__title">Интеллектуальный клуб</div>
-                </div>
-                <div class="feature__text">Играем, взаимодействуем в команде, учимся распределять роли, расширяем кругозор</div>
+      <div class="sections">
+        <div class="sections__item" id="lab">
+          <section class="intro-section">
+            <div class="info-block inner-container">
+              <div class="info-block__inner">
+                <p>Группа продленного дня — это отличный способ сделать уроки, погулять, пообедать и позаниматься по разным программам. Большой плюс заключается в том, что по всем занятиям не придется ездить, простаивая в пробках, утомляя себя и ребенка. Мы находимся в самом сердце города у Сквера оперного театра. Диетический и вкусный обед, прогулка в парке снимут усталость, оздоровят, наполнят детскую душу покоем и радостью. Мы тщательно сделаем все уроки, убедимся, что материал усвоен.</p>
+                <p>При необходимости позанимаемся по предмету дополнительно. Удивительно, что ребята незаметно для себя становятся аккуратными, усидчивыми и внимательными!</p>
               </div>
             </div>
-          </div>
+          </section>
+          <section class="section programs-section">
+            <div class="inner-container">
+              <h2 class="section__title">Программы</h2>
+              <div class="features">
+                <div class="features__cell">
+                  <div class="feature">
+                    <div class="feature__head" style="color: #00d2ff">
+                      <svg class="feature__dash feature__dash_left">
+                        <use xlink:href="#dash-line"></use>
+                      </svg>
+                      <svg class="feature__dash feature__dash_right">
+                        <use xlink:href="#dash-line"></use>
+                      </svg><img class="feature__icon" src="img/features/4.svg" width="96" height="96">
+                    </div>
+                    <div class="feature__title">Пятый элемент</div>
+                    <div class="feature__text">Познаем мир. Ставим химические, физические и биологические опыты</div>
+                  </div>
+                </div>
+                <div class="features__cell">
+                  <div class="feature">
+                    <div class="feature__head" style="color: #35ff6d">
+                      <svg class="feature__dash feature__dash_left">
+                        <use xlink:href="#dash-line"></use>
+                      </svg>
+                      <svg class="feature__dash feature__dash_right">
+                        <use xlink:href="#dash-line"></use>
+                      </svg><img class="feature__icon" src="img/features/1.svg" width="96" height="96">
+                    </div>
+                    <div class="feature__title">Анатомия здоровья</div>
+                    <div class="feature__text">Изучаем свой организм. Узнаем, как ухаживать за своим телом и его органами</div>
+                  </div>
+                </div>
+                <div class="features__cell">
+                  <div class="feature">
+                    <div class="feature__head" style="color: #ff224d">
+                      <svg class="feature__dash feature__dash_left">
+                        <use xlink:href="#dash-line"></use>
+                      </svg>
+                      <svg class="feature__dash feature__dash_right">
+                        <use xlink:href="#dash-line"></use>
+                      </svg><img class="feature__icon" src="img/features/2.svg" width="96" height="96">
+                    </div>
+                    <div class="feature__title">Творческая мастерская</div>
+                    <div class="feature__text">Раскрываем свой потенциал. Рисуем, лепим, мастерим</div>
+                  </div>
+                </div>
+                <div class="features__cell">
+                  <div class="feature">
+                    <div class="feature__head" style="color: #fff801">
+                      <svg class="feature__dash feature__dash_left">
+                        <use xlink:href="#dash-line"></use>
+                      </svg>
+                      <svg class="feature__dash feature__dash_right">
+                        <use xlink:href="#dash-line"></use>
+                      </svg><img class="feature__icon" src="img/features/9.svg" width="96" height="96">
+                    </div>
+                    <div class="feature__title">Интеллектуальный клуб</div>
+                    <div class="feature__text">Играем, взаимодействуем в команде, учимся распределять роли, расширяем кругозор</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shedule">
+              <div class="inner-container">
+                <div class="shedule__wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>9:00</th>
+                        <th>10:30</th>
+                        <th>12:00</th>
+                        <th>14:00</th>
+                        <th>15:00</th>
+                        <th>16:00</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>
+                          <div>пн</div>
+                        </th>
+                        <td>Интеллект. игры</td>
+                        <td>Кулинария</td>
+                        <td></td>
+                        <td></td>
+                        <td>Пятый элемент</td>
+                        <td>Интеллект. игры</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div>вт</div>
+                        </th>
+                        <td>Интеллект. игры</td>
+                        <td>Что? Где? Когда?</td>
+                        <td></td>
+                        <td>Комиксы</td>
+                        <td>Комиксы</td>
+                        <td>Интеллект. игры</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div>ср</div>
+                        </th>
+                        <td>Интеллект. игры</td>
+                        <td>Пятый элемент</td>
+                        <td>Пятый элемент</td>
+                        <td></td>
+                        <td>Что? Где? Когда?</td>
+                        <td>Анатомия здоровья</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div>чт</div>
+                        </th>
+                        <td>Интеллект. игры</td>
+                        <td>Кулинария</td>
+                        <td></td>
+                        <td></td>
+                        <td>Пятый элемент</td>
+                        <td>Пятый элемент</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div>пт</div>
+                        </th>
+                        <td>Интеллект. игры</td>
+                        <td>Кулинария</td>
+                        <td></td>
+                        <td>Анатомия здоровья</td>
+                        <td></td>
+                        <td>Творческая мастерская</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div>сб</div>
+                        </th>
+                        <td></td>
+                        <td>Что? Где? Когда?</td>
+                        <td></td>
+                        <td>Анатомия здоровья</td>
+                        <td></td>
+                        <td>Творческая мастерская</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section doc-section">
+            <div class="inner-container doc-section__container">
+              <h2 class="section__title"><a class="btn btn_outline doc-section__download" href="#">Скачать PDF</a></h2>
+              <div><span>Кроме того, вы можете следить за расписанием в нашем паблике во Вконтакте —</span>
+                <div><a class="link" href="www.vk.com/periscopekids" target="_blank">www.vk.com/periscopekids</a></div>
+              </div>
+            </div>
+          </section>
+          <section class="section form-section">
+            <div class="inner-container">
+              <h2 class="form-section__title">Оставить заявку</h2>
+              <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время</p>
+              <form class="requset-form" action="" name="">
+                <input class="text-input requset-form__input" placeholder="Ваше имя">
+                <input class="text-input requset-form__input" placeholder="Ваш номер телефона">
+                <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
+              </form>
+            </div>
+          </section>
         </div>
-      </section>
-      <section class="section doc-section">
-        <div class="inner-container doc-section__container">
-          <h2 class="section__title"><a class="btn btn_outline doc-section__download" href="#">Скачать PDF</a></h2>
-          <div><span>Кроме того, вы можете следить за расписанием в нашем паблике во Вконтакте —</span>
-            <div><a class="link" href="www.vk.com/periscopekids" target="_blank">www.vk.com/periscopekids</a></div>
-          </div>
+        <div class="sections__item sections__item_active" id="after">
+          <section class="intro-section">
+            <div class="info-block inner-container">
+              <div class="info-block__inner">
+                <p>Группа продленного дня — это отличный способ сделать уроки, погулять, пообедать и позаниматься по разным программам. Большой плюс заключается в том, что по всем занятиям не придется ездить, простаивая в пробках, утомляя себя и ребенка. Мы находимся в самом сердце города у Сквера оперного театра. Диетический и вкусный обед, прогулка в парке снимут усталость, оздоровят, наполнят детскую душу покоем и радостью. Мы тщательно сделаем все уроки, убедимся, что материал усвоен.</p>
+                <p>При необходимости позанимаемся по предмету дополнительно. Удивительно, что ребята незаметно для себя становятся аккуратными, усидчивыми и внимательными!</p>
+              </div>
+            </div>
+          </section>
+          <section class="section programs-section">
+            <div class="inner-container">
+              <h2 class="section__title">Продленка</h2>
+              <div class="features">
+                <div class="features__cell">
+                  <div class="feature">
+                    <div class="feature__head" style="color: #00d2ff">
+                      <svg class="feature__dash feature__dash_left">
+                        <use xlink:href="#dash-line"></use>
+                      </svg>
+                      <svg class="feature__dash feature__dash_right">
+                        <use xlink:href="#dash-line"></use>
+                      </svg><img class="feature__icon" src="img/features/5.svg" width="96" height="96">
+                    </div>
+                    <div class="feature__title">Сделаем домашнее <br>задание</div>
+                  </div>
+                </div>
+                <div class="features__cell">
+                  <div class="feature">
+                    <div class="feature__head" style="color: #35ff6d">
+                      <svg class="feature__dash feature__dash_left">
+                        <use xlink:href="#dash-line"></use>
+                      </svg>
+                      <svg class="feature__dash feature__dash_right">
+                        <use xlink:href="#dash-line"></use>
+                      </svg><img class="feature__icon" src="img/features/6.svg" width="96" height="96">
+                    </div>
+                    <div class="feature__title">Адаптируемся <br>к школе</div>
+                  </div>
+                </div>
+                <div class="features__cell">
+                  <div class="feature">
+                    <div class="feature__head" style="color: #ff224d">
+                      <svg class="feature__dash feature__dash_left">
+                        <use xlink:href="#dash-line"></use>
+                      </svg>
+                      <svg class="feature__dash feature__dash_right">
+                        <use xlink:href="#dash-line"></use>
+                      </svg><img class="feature__icon" src="img/features/7.svg" width="96" height="96">
+                    </div>
+                    <div class="feature__title">Повысим успеваемость <br>вашего ребенка</div>
+                  </div>
+                </div>
+                <div class="features__cell">
+                  <div class="feature">
+                    <div class="feature__head" style="color: #fff801">
+                      <svg class="feature__dash feature__dash_left">
+                        <use xlink:href="#dash-line"></use>
+                      </svg>
+                      <svg class="feature__dash feature__dash_right">
+                        <use xlink:href="#dash-line"></use>
+                      </svg><img class="feature__icon" src="img/features/9.svg" width="96" height="96">
+                    </div>
+                    <div class="feature__title">Позанимаемся <br>с репетитором</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section form-section">
+            <div class="inner-container">
+              <div class="form-section__cell form-section__cell_align_left">
+                <p class="form-section__text">Стоимость в группе продленного дня <br> за 1 месяц (одно занятие бесплатно)</p>
+                <table class="price-table">
+                  <thead>
+                    <tr>
+                      <th>Цена</th>
+                      <th>Занятий в неделю</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="price">12 650</div>
+                      </td>
+                      <td>
+                        <ul class="day-numbers">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="price">10 350</div>
+                      </td>
+                      <td>
+                        <ul class="day-numbers">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="price">8 600</div>
+                      </td>
+                      <td>
+                        <ul class="day-numbers">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="price">5 355</div>
+                      </td>
+                      <td>
+                        <ul class="day-numbers">
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="price">3 075</div>
+                      </td>
+                      <td>
+                        <ul class="day-numbers">
+                          <li></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="form-section__cell form-section__cell_align_left">
+                <h2 class="form-section__title">Оставить заявку</h2>
+                <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время</p>
+                <form class="requset-form requset-form_in-cell" action="" name="">
+                  <input class="text-input requset-form__input" placeholder="Ваше имя">
+                  <input class="text-input requset-form__input" placeholder="Ваш номер телефона">
+                  <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
+                </form>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-      <section class="section form-section">
-        <div class="inner-container">
-          <h2 class="form-section__title">Оставить заявку</h2>
-          <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время</p>
-          <form class="requset-form" action="" name="">
-            <input class="text-input requset-form__input" placeholder="Ваше имя">
-            <input class="text-input requset-form__input" placeholder="Ваш номер телефона">
-            <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
-          </form>
+        <div class="sections__item" id="holidays">
+          <div></div>
         </div>
-      </section>
+      </div>
       <section class="section time-place">
         <div class="container time-place__container">
           <div class="inner-container">

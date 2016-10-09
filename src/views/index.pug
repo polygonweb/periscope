@@ -12,18 +12,16 @@ html
 		title Periscope | ЛАБОРАТОРИЯ ЗНАНИЙ
 	body
 
-		//- svg.svg-defs(xmlns="http://www.w3.org/2000/svg")
-		//- 	symbol(width="20" height="20" viewBox="0 0 20 20")
-		//- 		g(fill="none" fill-rule="evenodd")
-		//- 			path(fill="#3F4D60" d="M18.9 0H1.1C.492 0 0 .492 0 1.1v17.79c0 .292.116.572.322.778.206.206.486.322.778.322h9.58v-7.75H8.07v-3h2.61V7c-.11-1.07.26-2.132 1.008-2.904.75-.77 1.8-1.172 2.872-1.096.778-.002 1.556.038 2.33.12v2.7h-1.6c-.414-.094-.847.03-1.15.327-.303.297-.435.727-.35 1.143v1.93h3l-.39 3h-2.6V20h5.1c.292 0 .572-.116.778-.322.206-.206.322-.486.322-.778V1.1c0-.292-.116-.572-.322-.778C19.472.116 19.192 0 18.9 0z")
-
-		//- 	symbol(width="20" height="17" viewBox="0 0 20 17")#icon-twitter
-		//- 		g(fill="none" fill-rule="evenodd")
-		//- 			path(fill="#3F4D60" d="M20.05 1.916c-.75.334-1.545.553-2.36.65.855-.514 1.495-1.32 1.8-2.27-.807.48-1.69.818-2.61 1-1.272-1.354-3.294-1.686-4.933-.81-1.638.875-2.486 2.74-2.067 4.55-3.3-.165-6.376-1.724-8.46-4.29C.33 2.622.887 5.02 2.69 6.226c-.652-.02-1.29-.194-1.86-.51v.05c.013 1.944 1.386 3.613 3.29 4-.603.164-1.236.188-1.85.07.538 1.67 2.076 2.815 3.83 2.85-1.454 1.143-3.25 1.763-5.1 1.76-.334 0-.668-.02-1-.06 3.594 2.32 8.17 2.49 11.923.438 3.755-2.05 6.087-5.99 6.077-10.268v-.53c.803-.576 1.497-1.29 2.05-2.11z")
-
-		//- 	symbol(width="22" height="16" viewBox="0 0 22 16")#icon-youtube
-		//- 		g(fill="none" fill-rule="evenodd")
-		//- 			path(fill="#3F4D60" d="M20.89 1.15c-.583-.587-1.373-.92-2.2-.93C15.61 0 10.99 0 10.99 0s-6.92.164-7.7.22c-.827.01-1.617.343-2.2.93-.467.643-.767 1.392-.87 2.18C.083 4.512.01 5.7 0 6.89v1.67c.01 1.19.083 2.378.22 3.56.103.788.403 1.537.87 2.18.67.595 1.533.93 2.43.94 1.76.17 7.48.22 7.48.22s4.62 0 7.7-.23c.827-.01 1.617-.343 2.2-.93.467-.643.767-1.392.87-2.18.137-1.182.21-2.37.22-3.56V6.89c-.013-1.19-.09-2.378-.23-3.56-.103-.788-.403-1.537-.87-2.18zM8.98 10.58V4.4l5.94 3.1-5.94 3.08z")
+		svg.svg-defs(xmlns="http://www.w3.org/2000/svg")
+			symbol(width="74" height="4" viewBox="0 0 74 4")#dash-line
+				path(
+					fill="none"
+					stroke="currentColor"
+					stroke-width="3"
+					d="M2 2h79.62"
+					stroke-linecap="round"
+					stroke-dasharray="10"
+				)
 
 		.page
 
@@ -44,61 +42,249 @@ html
 				.container
 					h2.section__title
 						nav.page-nav
-							a(href="#").page-nav__link Лаборатория
-							a(href="#").page-nav__link Продленка
-							a(href="#").page-nav__link Каникулы
+							a(href="#lab").page-nav__link.page-nav__link_active Лаборатория
+							a(href="#after").page-nav__link Продленка
+							a(href="#holidays").page-nav__link Каникулы
 
-			section.intro-section
-				.info-block.inner-container
-					.info-block__inner
-						p Группа продленного дня — это отличный способ сделать уроки, погулять, пообедать и позаниматься по разным программам. Большой плюс заключается в том, что по всем занятиям не придется ездить, простаивая в пробках, утомляя себя и ребенка. Мы находимся в самом сердце города у Сквера оперного театра. Диетический и вкусный обед, прогулка
-						p в парке снимут усталость, оздоровят, наполнят детскую душу покоем и радостью. Мы тщательно сделаем все уроки, убедимся, что материал усвоен.
-						p При необходимости позанимаемся по предмету дополнительно. Удивительно, что ребята незаметно для себя становятся аккуратными, усидчивыми и внимательными!
+			.sections
+				.sections__item(id="lab")
 
-			section.section
-				.inner-container
-					h2.section__title Программы
-					.inner-container
-						.features
-							.features__cell
-								.feature
-									img(src="img/features/4.svg").feature__icon
-									.feature__title Пятый элемент
-									.feature__text Познаем мир. Ставим химические, физические и биологические опыты
-							.features__cell
-								.feature
-									img(src="img/features/1.svg").feature__icon
-									.feature__title Анатомия здоровья
-									.feature__text Изучаем свой организм. Узнаем, как ухаживать за своим телом и его органами
-							.features__cell
-								.feature
-									img(src="img/features/2.svg").feature__icon
-									.feature__title Творческая мастерская
-									.feature__text Раскрываем свой потенциал. Рисуем, лепим, мастерим
-							.features__cell
-								.feature
-									img(src="img/features/9.svg").feature__icon
-									.feature__title Интеллектуальный клуб
-								.feature__text Играем, взаимодействуем в команде, учимся распределять роли, расширяем кругозор
+					section.intro-section
+						.info-block.inner-container
+							.info-block__inner
+								p Группа продленного дня — это отличный способ сделать уроки, погулять, пообедать и позаниматься по разным программам. Большой плюс заключается в том, что по всем занятиям не придется ездить, простаивая в пробках, утомляя себя и ребенка. Мы находимся в самом сердце города у Сквера оперного театра. Диетический и вкусный обед, прогулка в парке снимут усталость, оздоровят, наполнят детскую душу покоем и радостью. Мы тщательно сделаем все уроки, убедимся, что материал усвоен.
+								p При необходимости позанимаемся по предмету дополнительно. Удивительно, что ребята незаметно для себя становятся аккуратными, усидчивыми и внимательными!
 
-			section.section.doc-section
-				.inner-container.doc-section__container
-					h2.section__title
-						a(href="#").btn.btn_outline.doc-section__download Скачать PDF
+					section.section.programs-section
+						.inner-container
+							h2.section__title Программы
+							.features
+								.features__cell
+									.feature
+										.feature__head(style="color: #00d2ff")
+											svg.feature__dash.feature__dash_left
+												use(xlink:href="#dash-line")
+											svg.feature__dash.feature__dash_right
+												use(xlink:href="#dash-line")
+											img(src="img/features/4.svg" width="96" height="96").feature__icon
+										.feature__title Пятый элемент
+										.feature__text Познаем мир. Ставим химические, физические и биологические опыты
+								.features__cell
+									.feature
+										.feature__head(style="color: #35ff6d")
+											svg.feature__dash.feature__dash_left
+												use(xlink:href="#dash-line")
+											svg.feature__dash.feature__dash_right
+												use(xlink:href="#dash-line")
+											img(src="img/features/1.svg" width="96" height="96").feature__icon
+										.feature__title Анатомия здоровья
+										.feature__text Изучаем свой организм. Узнаем, как ухаживать за своим телом и его органами
+								.features__cell
+									.feature
+										.feature__head(style="color: #ff224d;")
+											svg.feature__dash.feature__dash_left
+												use(xlink:href="#dash-line")
+											svg.feature__dash.feature__dash_right
+												use(xlink:href="#dash-line")
+											img(src="img/features/2.svg" width="96" height="96").feature__icon
+										.feature__title Творческая мастерская
+										.feature__text Раскрываем свой потенциал. Рисуем, лепим, мастерим
+								.features__cell
+										.feature
+											.feature__head(style="color: #fff801;")
+												svg.feature__dash.feature__dash_left
+													use(xlink:href="#dash-line")
+												svg.feature__dash.feature__dash_right
+													use(xlink:href="#dash-line")
+												img(src="img/features/9.svg" width="96" height="96").feature__icon
+											.feature__title Интеллектуальный клуб
+											.feature__text Играем, взаимодействуем в команде, учимся распределять роли, расширяем кругозор
+
+						.shedule
+							.inner-container
+								.shedule__wrap
+									table
+										thead
+											tr
+												th
+												th 9:00
+												th 10:30
+												th 12:00
+												th 14:00
+												th 15:00
+												th 16:00
+										tbody
+											tr
+												th: div пн
+												td Интеллект. игры
+												td Кулинария
+												td
+												td
+												td Пятый элемент
+												td Интеллект. игры
+											tr
+												th: div вт
+												td Интеллект. игры
+												td Что? Где? Когда?
+												td
+												td Комиксы
+												td Комиксы
+												td Интеллект. игры
+											tr
+												th: div ср
+												td Интеллект. игры
+												td Пятый элемент
+												td Пятый элемент
+												td
+												td Что? Где? Когда?
+												td Анатомия здоровья
+											tr
+												th: div чт
+												td Интеллект. игры
+												td Кулинария
+												td
+												td
+												td Пятый элемент
+												td Пятый элемент
+											tr
+												th: div пт
+												td Интеллект. игры
+												td Кулинария
+												td
+												td Анатомия здоровья
+												td
+												td Творческая мастерская
+											tr
+												th: div сб
+												td
+												td Что? Где? Когда?
+												td
+												td Анатомия здоровья
+												td
+												td Творческая мастерская
+
+					section.section.doc-section
+						.inner-container.doc-section__container
+							h2.section__title
+								a(href="#").btn.btn_outline.doc-section__download Скачать PDF
+							div
+								span Кроме того, вы можете следить за расписанием в нашем паблике во Вконтакте —
+								div
+									a(href="www.vk.com/periscopekids" target="_blank").link www.vk.com/periscopekids
+
+					section.section.form-section
+						.inner-container
+							h2.form-section__title Оставить заявку
+							p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время
+							form(action="" name="").requset-form
+								input(placeholder="Ваше имя").text-input.requset-form__input
+								input(placeholder="Ваш номер телефона").text-input.requset-form__input
+								button(type="submit").btn.requset-form__submit Отправить заявку
+
+				.sections__item(id="after").sections__item_active
+					section.intro-section
+						.info-block.inner-container
+							.info-block__inner
+								p Группа продленного дня — это отличный способ сделать уроки, погулять, пообедать и позаниматься по разным программам. Большой плюс заключается в том, что по всем занятиям не придется ездить, простаивая в пробках, утомляя себя и ребенка. Мы находимся в самом сердце города у Сквера оперного театра. Диетический и вкусный обед, прогулка в парке снимут усталость, оздоровят, наполнят детскую душу покоем и радостью. Мы тщательно сделаем все уроки, убедимся, что материал усвоен.
+								p При необходимости позанимаемся по предмету дополнительно. Удивительно, что ребята незаметно для себя становятся аккуратными, усидчивыми и внимательными!
+
+					section.section.programs-section
+						.inner-container
+							h2.section__title Продленка
+							.features
+								.features__cell
+									.feature
+										.feature__head(style="color: #00d2ff")
+											svg.feature__dash.feature__dash_left
+												use(xlink:href="#dash-line")
+											svg.feature__dash.feature__dash_right
+												use(xlink:href="#dash-line")
+											img(src="img/features/5.svg" width="96" height="96").feature__icon
+										.feature__title Сделаем домашнее <br>задание
+								.features__cell
+									.feature
+										.feature__head(style="color: #35ff6d")
+											svg.feature__dash.feature__dash_left
+												use(xlink:href="#dash-line")
+											svg.feature__dash.feature__dash_right
+												use(xlink:href="#dash-line")
+											img(src="img/features/6.svg" width="96" height="96").feature__icon
+										.feature__title Адаптируемся <br>к школе
+								.features__cell
+									.feature
+										.feature__head(style="color: #ff224d;")
+											svg.feature__dash.feature__dash_left
+												use(xlink:href="#dash-line")
+											svg.feature__dash.feature__dash_right
+												use(xlink:href="#dash-line")
+											img(src="img/features/7.svg" width="96" height="96").feature__icon
+										.feature__title Повысим успеваемость <br>вашего ребенка
+								.features__cell
+										.feature
+											.feature__head(style="color: #fff801;")
+												svg.feature__dash.feature__dash_left
+													use(xlink:href="#dash-line")
+												svg.feature__dash.feature__dash_right
+													use(xlink:href="#dash-line")
+												img(src="img/features/9.svg" width="96" height="96").feature__icon
+											.feature__title Позанимаемся <br>с репетитором
+
+					section.section.form-section
+						.inner-container
+							.form-section__cell.form-section__cell_align_left
+								p.form-section__text Стоимость в группе продленного дня <br> за 1 месяц (одно занятие бесплатно)
+								table.price-table
+									thead
+										tr
+											th Цена
+											th Занятий в неделю
+									tbody
+										tr
+											td: .price 12 650
+											td
+												ul.day-numbers
+													li
+													li
+													li
+													li
+													li
+										tr
+											td: .price 10 350
+											td
+												ul.day-numbers
+													li
+													li
+													li
+													li
+										tr
+											td: .price 8 600
+											td
+												ul.day-numbers
+													li
+													li
+													li
+										tr
+											td: .price 5 355
+											td
+												ul.day-numbers
+													li
+													li
+										tr
+											td: .price 3 075
+											td
+												ul.day-numbers
+													li
+
+							.form-section__cell.form-section__cell_align_left
+								h2.form-section__title Оставить заявку
+								p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время
+								form(action="" name="").requset-form.requset-form_in-cell
+									input(placeholder="Ваше имя").text-input.requset-form__input
+									input(placeholder="Ваш номер телефона").text-input.requset-form__input
+									button(type="submit").btn.requset-form__submit Отправить заявку
+
+				.sections__item(id="holidays")
 					div
-						span Кроме того, вы можете следить за расписанием в нашем паблике во Вконтакте —
-						div
-							a(href="www.vk.com/periscopekids" target="_blank").link www.vk.com/periscopekids
-
-
-			section.section.form-section
-				.inner-container
-					h2.form-section__title Оставить заявку
-					p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время
-					form(action="" name="").requset-form
-						input(placeholder="Ваше имя").text-input.requset-form__input
-						input(placeholder="Ваш номер телефона").text-input.requset-form__input
-						button(type="submit").btn.requset-form__submit Отправить заявку
 
 
 			section.section.time-place

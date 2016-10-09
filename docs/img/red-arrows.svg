@@ -2,11 +2,11 @@
 <svg width="56px" height="22px" viewBox="0 0 56 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Periscope" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Periscope/01a_lab" transform="translate(-792.000000, -530.000000)">
+        <g id="Periscope/01a_lab" transform="translate(-792.000000, -530.000000)" fill="#ff2851">
             <g id="Group-2-Copy" transform="translate(792.000000, 530.000000)">
-                <polygon fill="#000000" id="Triangle" points="40 21.3017578 40 0 56 10.6508789"></polygon>
-                <polygon fill="#000000" id="Triangle-Copy" points="20 21.3017578 20 0 36 10.6508789"></polygon>
-                <polygon fill="#00d3ff" id="Triangle-Copy-2" points="0 21.3017578 0 0 16 10.6508789"></polygon>
+                <polygon id="Triangle" points="40 21.3017578 40 0 56 10.6508789"></polygon>
+                <polygon id="Triangle-Copy" points="20 21.3017578 20 0 36 10.6508789"></polygon>
+                <polygon id="Triangle-Copy-2" points="0 21.3017578 0 0 16 10.6508789"></polygon>
             </g>
         </g>
     </g>
