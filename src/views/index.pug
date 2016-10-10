@@ -47,7 +47,7 @@ html
 							a(href="#holidays").page-nav__link Каникулы
 
 			.sections
-				.sections__item(id="lab")
+				.sections__item(id="lab").sections__item_active
 
 					section.intro-section
 						.info-block.inner-container
@@ -181,7 +181,7 @@ html
 								input(placeholder="Ваш номер телефона").text-input.requset-form__input
 								button(type="submit").btn.requset-form__submit Отправить заявку
 
-				.sections__item(id="after").sections__item_active
+				.sections__item(id="after")
 					section.intro-section
 						.info-block.inner-container
 							.info-block__inner
@@ -233,7 +233,7 @@ html
 						.inner-container
 							.form-section__cell.form-section__cell_align_left
 								p.form-section__text Стоимость в группе продленного дня <br> за 1 месяц (одно занятие бесплатно)
-								table.price-table
+								table.data-table
 									thead
 										tr
 											th Цена
@@ -284,7 +284,47 @@ html
 									button(type="submit").btn.requset-form__submit Отправить заявку
 
 				.sections__item(id="holidays")
-					div
+					section.section.programs-section
+						.inner-container
+							h2.section__title Продленка
+							.features
+								.features__cell
+									.feature
+										.feature__head(style="color: #35ff6d")
+											svg.feature__dash.feature__dash_left
+												use(xlink:href="#dash-line")
+											svg.feature__dash.feature__dash_right
+												use(xlink:href="#dash-line")
+											img(src="img/features/3.svg" width="96" height="96").feature__icon
+										.feature__title Вокруг света за 5 дней
+										.feature__text В программе: всякие крутые опыты и всякие крутые штуки, которые вы никогда не попробуйте (примерный текст, объем может быть увеличен)
+
+					section.section.form-section
+						.inner-container
+							.form-section__cell.form-section__cell_align_left
+								p.form-section__text Внимание! Количество мест ограниченно! <br>Мы формируем две группы на даты:
+								table.data-table
+									tbody
+										tr
+											th I смена
+										tr
+											td 24 – 28 сентября
+										tr
+											th II смена
+										tr
+											td 31 – 4 ноября
+										tr
+											th Цена
+										tr
+											td: .price 8 500
+
+							.form-section__cell.form-section__cell_align_left
+								h2.form-section__title Оставить заявку
+								p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время
+								form(action="" name="").requset-form.requset-form_in-cell
+									input(placeholder="Ваше имя").text-input.requset-form__input
+									input(placeholder="Ваш номер телефона").text-input.requset-form__input
+									button(type="submit").btn.requset-form__submit Отправить заявку
 
 
 			section.section.time-place

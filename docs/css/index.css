@@ -554,26 +554,26 @@ html {
 .day-numbers li:not(:last-child) {
   margin-right: 19px;
 }
-.price-table {
+.data-table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 }
-.price-table th,
-.price-table td {
+.data-table th,
+.data-table td {
   padding: 13px 12px;
   padding: 13px 12px;
 }
-.price-table th:first-child,
-.price-table td:first-child {
+.data-table th:first-child,
+.data-table td:first-child {
   padding-left: 0;
   width: 160px;
 }
-.price-table th:last-child,
-.price-table td:last-child {
+.data-table th:last-child,
+.data-table td:last-child {
   padding-right: 0;
 }
-.price-table th {
+.data-table th {
   padding-top: 11px;
   padding-bottom: 11px;
   font-size: 16px;
@@ -581,7 +581,7 @@ html {
   font-weight: normal;
   color: rgba(140,148,160,0.6);
 }
-.form-section__text + .price-table {
+.form-section__text + .data-table {
   margin-top: -21px;
 }
 .container {
