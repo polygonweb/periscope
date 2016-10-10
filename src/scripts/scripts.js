@@ -11,9 +11,11 @@
 
 		bindEvents: function() {
 			var self = this;
+			var eventType = ('ontouchstart' in window) ? 'touchstart' : 'click';
+			// alert(eventType);
 			for(var index = 0, len = this._links.length; index < len; index++ ) {
 				(function(index){
-					self._links[index].addEventListener('click', function(e) {
+					self._links[index].addEventListener(eventType, function(e) {
 						e.preventDefault();
 						self.setActive(index);
 					});
@@ -37,6 +39,23 @@
 	global.pageItemsNav = pageItemsNav;
 
 })(window, document);
+
+
+;(function(global, document, $) {
+	'use strict';
+
+	var btn = document.getElementById('cta-btn');
+	var eventType = ('ontouchstart' in window) ? 'touchstart' : 'click';
+	btn.addEventListener(eventType, function(e) {
+		e.preventDefault();
+		var formSection = document.querySelector('.sections__item_active .form-section');
+		if (!formSection) return;
+
+		$('html, body').animate({
+			scrollTop: $(formSection).offset().top
+		}, 700)
+	})
+})(window, document, window.jQuery || window.Zepto);
 
 
 ;(function(global, document) {
