@@ -175,12 +175,17 @@ html
 
 					section.section.form-section
 						.inner-container
-							h2.form-section__title Оставить заявку
-							p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время
-							form(action="" name="").requset-form
-								input(placeholder="Ваше имя").text-input.requset-form__input
-								input(placeholder="Ваш номер телефона").text-input.requset-form__input
-								button(type="submit").btn.requset-form__submit Отправить заявку
+							.form-wrapper
+								.form-wrapper__req
+									h2.form-section__title Оставить заявку
+									p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время
+									form(action="/send" method="POST").requset-form
+										input(type="text" name="client-name" placeholder="Ваше имя" required).text-input.requset-form__input
+										input(type="tel" name="client-tel" placeholder="Ваш номер телефона" required).text-input.requset-form__input
+										button(type="submit").btn.requset-form__submit Отправить заявку
+								.form-wrapper__res
+									h2.form-section__title Заявка отправлена!
+									p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время
 
 				.sections__item(id="after")
 					section.intro-section
@@ -277,12 +282,18 @@ html
 													li
 
 							.form-section__cell.form-section__cell_align_left
-								h2.form-section__title Оставить заявку
-								p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время
-								form(action="" name="").requset-form.requset-form_in-cell
-									input(placeholder="Ваше имя").text-input.requset-form__input
-									input(placeholder="Ваш номер телефона").text-input.requset-form__input
-									button(type="submit").btn.requset-form__submit Отправить заявку
+								.form-wrapper
+									.form-wrapper__req
+										h2.form-section__title Оставить заявку
+										p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время
+										form(action="/send" method="POST").requset-form.requset-form_in-cell
+											input(type="text" name="client-name" placeholder="Ваше имя" required).text-input.requset-form__input
+											input(type="tel" name="client-tel" placeholder="Ваш номер телефона" required).text-input.requset-form__input
+											button(type="submit").btn.requset-form__submit Отправить заявку
+									.form-wrapper__res
+										h2.form-section__title Заявка отправлена!
+										p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время
+
 
 				.sections__item(id="holidays")
 					section.section.programs-section.programs-section_no-pad
@@ -319,12 +330,18 @@ html
 											td: .price 8 500
 
 							.form-section__cell.form-section__cell_align_left
-								h2.form-section__title Оставить заявку
-								p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время
-								form(action="" name="").requset-form.requset-form_in-cell
-									input(placeholder="Ваше имя").text-input.requset-form__input
-									input(placeholder="Ваш номер телефона").text-input.requset-form__input
-									button(type="submit").btn.requset-form__submit Отправить заявку
+								.form-wrapper
+									.form-wrapper__req
+										h2.form-section__title Оставить заявку
+										p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время
+										form(action="/send" method="POST").requset-form.requset-form_in-cell
+											input(type="text" name="client-name" placeholder="Ваше имя" required).text-input.requset-form__input
+											input(type="tel" name="client-tel" placeholder="Ваш номер телефона" required).text-input.requset-form__input
+											button(type="submit").btn.requset-form__submit Отправить заявку
+									.form-wrapper__res
+										h2.form-section__title Заявка отправлена!
+										p.form-section__text Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время
+
 
 
 			section.section.time-place

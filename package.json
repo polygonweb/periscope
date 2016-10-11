@@ -10,6 +10,7 @@
     "build": "concurrently \"npm run clean\" & \"npm run css:build\" && \"npm run html:build\" && \"npm run scripts:build\"",
     "dev": "concurrently \"npm run css:watch\" && \"npm run html:watch\" && \"npm run server\"",
     "server": "browser-sync start --server --files \"docs/**/*.*\" --serveStatic docs",
+    "proxy": "browser-sync start --proxy \"http://periscope\" --files \"docs\" --index \"docs/index.html\"",
     "css:build": "stylus src/styles/index.styl --compress --use autoprefixer-stylus --include-css --include node_modules --out docs/css/index.min.css",
     "css:watch": "stylus src/styles/index.styl --use autoprefixer-stylus --include-css --include node_modules --out docs/css --watch",
     "css:min": "csso --input docs/css/index.css --output docs/css/index.min.css --comments none --restructure-off",

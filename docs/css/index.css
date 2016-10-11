@@ -991,6 +991,16 @@ html {
   margin: 0 0 29px;
   font-size: 1rem;
 }
+.requset-feedback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
 .requset-form {
   position: relative;
   margin-left: auto;
@@ -1024,6 +1034,40 @@ html {
 .requset-form_in-cell::after {
   left: auto;
   right: 0;
+}
+.form-wrapper {
+  position: relative;
+}
+.form-wrapper__req,
+.form-wrapper__res {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.form-wrapper__req {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.form-wrapper__res {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+}
+.form-sended .form-wrapper__req {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+.form-sended .form-wrapper__res {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .time-place {
   padding: 93px 0 42px;

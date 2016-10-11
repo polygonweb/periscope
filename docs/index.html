@@ -207,13 +207,21 @@
           </section>
           <section class="section form-section">
             <div class="inner-container">
-              <h2 class="form-section__title">Оставить заявку</h2>
-              <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время</p>
-              <form class="requset-form" action="" name="">
-                <input class="text-input requset-form__input" placeholder="Ваше имя">
-                <input class="text-input requset-form__input" placeholder="Ваш номер телефона">
-                <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
-              </form>
+              <div class="form-wrapper">
+                <div class="form-wrapper__req">
+                  <h2 class="form-section__title">Оставить заявку</h2>
+                  <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время</p>
+                  <form class="requset-form" action="/send" method="POST">
+                    <input class="text-input requset-form__input" type="text" name="client-name" placeholder="Ваше имя" required>
+                    <input class="text-input requset-form__input" type="tel" name="client-tel" placeholder="Ваш номер телефона" required>
+                    <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
+                  </form>
+                </div>
+                <div class="form-wrapper__res">
+                  <h2 class="form-section__title">Заявка отправлена!</h2>
+                  <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время</p>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -361,13 +369,21 @@
                 </table>
               </div>
               <div class="form-section__cell form-section__cell_align_left">
-                <h2 class="form-section__title">Оставить заявку</h2>
-                <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время</p>
-                <form class="requset-form requset-form_in-cell" action="" name="">
-                  <input class="text-input requset-form__input" placeholder="Ваше имя">
-                  <input class="text-input requset-form__input" placeholder="Ваш номер телефона">
-                  <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
-                </form>
+                <div class="form-wrapper">
+                  <div class="form-wrapper__req">
+                    <h2 class="form-section__title">Оставить заявку</h2>
+                    <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время</p>
+                    <form class="requset-form requset-form_in-cell" action="/send" method="POST">
+                      <input class="text-input requset-form__input" type="text" name="client-name" placeholder="Ваше имя" required>
+                      <input class="text-input requset-form__input" type="tel" name="client-tel" placeholder="Ваш номер телефона" required>
+                      <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
+                    </form>
+                  </div>
+                  <div class="form-wrapper__res">
+                    <h2 class="form-section__title">Заявка отправлена!</h2>
+                    <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -423,13 +439,21 @@
                 </table>
               </div>
               <div class="form-section__cell form-section__cell_align_left">
-                <h2 class="form-section__title">Оставить заявку</h2>
-                <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время</p>
-                <form class="requset-form requset-form_in-cell" action="" name="">
-                  <input class="text-input requset-form__input" placeholder="Ваше имя">
-                  <input class="text-input requset-form__input" placeholder="Ваш номер телефона">
-                  <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
-                </form>
+                <div class="form-wrapper">
+                  <div class="form-wrapper__req">
+                    <h2 class="form-section__title">Оставить заявку</h2>
+                    <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется с вами в ближайшее время</p>
+                    <form class="requset-form requset-form_in-cell" action="/send" method="POST">
+                      <input class="text-input requset-form__input" type="text" name="client-name" placeholder="Ваше имя" required>
+                      <input class="text-input requset-form__input" type="tel" name="client-tel" placeholder="Ваш номер телефона" required>
+                      <button class="btn requset-form__submit" type="submit">Отправить заявку</button>
+                    </form>
+                  </div>
+                  <div class="form-wrapper__res">
+                    <h2 class="form-section__title">Заявка отправлена!</h2>
+                    <p class="form-section__text">Оставьте заявку или зайдайте вопрос и наш менеджер свяжется <br>с вами в ближайшее время</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

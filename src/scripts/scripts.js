@@ -58,6 +58,42 @@
 })(window, document, window.jQuery || window.Zepto);
 
 
+// ;(function(global, document, $) {
+// 	'use strict';
+
+// 	$('.requset-form').submit(function(e){
+
+// 			e.preventDefault();
+
+// 			var $this = $(this);
+// 			var $formWrapper = $this.closest('.form-wrapper');
+// 			var pathToAjax = $(this).attr('action');
+
+// 			$.ajax({
+// 				type: "POST",
+// 				url: pathToAjax,
+// 				data: {
+// 					'client-name': $this.find('[name="client-name"]').val(),
+// 					'client-name': $this.find('[name="client-tel"]').val(),
+// 				}
+// 			}).done(function(response) {
+// 				if ( response == 1 ) {
+// 					// "Письмо отправлено";
+// 					$formWrapper.addClass('form-sended');
+// 					setTimeout(function() {
+// 						$formWrapper.removeClass('form-sended');
+// 						// $this.reset();
+// 					}, 5000);
+// 				} else {
+// 					alert(response)
+// 				};
+// 			});
+
+// 			return false;
+// 		});
+// })(window, document, window.jQuery || window.Zepto);
+
+
 ;(function(global, document) {
 	'use strict';
 
